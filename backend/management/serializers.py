@@ -31,7 +31,7 @@ class StudentSerializer(serializers.ModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
-        fields = ["id", "name", "code"]
+        fields = ["id", "name", "code", "description"]
         read_only_fields = ["id"]
 
     def validate_code(self, value):
